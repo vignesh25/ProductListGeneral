@@ -1,0 +1,26 @@
+<ng-container *ngIf="showHeader">
+<mat-toolbar  color="primary">
+  <div class="header">
+    <div class="location-title restaurantFontBold">Variety Food Shop</div>
+    <br>
+  </div>
+</mat-toolbar>
+<div class="container search-container">
+  <div class="col-md-12 col-12 col-lg-12" style="margin-bottom: 1%;">
+    <input (input)="searchForDishes($event)" matInput placeholder="Search for dishes..." fullWidth class="search-input restaurantFontRegular">
+    <!-- <mat-icon class="search-icon">search</mat-icon> -->
+  </div>
+  <div class="col-md-12 col-12 col-lg-12">
+    <mat-slide-toggle class="toggle-btn" (change)="toggle($event)">
+      <div *ngIf="isToggleOn" class="restaurantFontBold">
+        Veg
+      </div>
+    </mat-slide-toggle>
+  </div>
+</div>
+<div class="container search-container col-md-12 col-12 col-lg-12">
+  
+  
+  
+</div>
+</ng-container>

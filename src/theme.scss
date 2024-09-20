@@ -1,0 +1,24 @@
+@import "../node_modules/@angular/material/theming";
+@include mat-core();
+
+$my-primary: mat-palette($mat-amber, 700);
+$my-accent: mat-palette($mat-amber, 500);
+$my-warn: mat-palette($mat-red);
+
+// Create the theme map with color, typography, and density
+$my-theme: mat-light-theme((
+  color: (
+    primary: $my-primary,
+    accent: $my-accent,
+    warn: $my-warn,
+  ),
+  typography: mat-typography-config(),
+  density: 0 // Default density, you can adjust or customize it if needed
+));
+  
+  
+
+  
+  
+
+@include angular-material-theme($my-theme);

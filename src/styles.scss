@@ -1,0 +1,66 @@
+@use '@angular/material' as mat;
+
+// Define the palettes for your theme
+$food-order-app-primary: mat.define-palette(mat.$indigo-palette);
+$food-order-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$food-order-app-warn: mat.define-palette(mat.$red-palette);
+
+
+$my-primary: mat.define-palette(mat.$amber-palette, 700);
+
+mat-toolbar.mat-primary {
+  background-color: #2CAEAF;
+}
+// Create the theme object
+$food-order-app-theme: mat.define-light-theme((
+  color: (
+    primary: $food-order-app-primary,
+    accent: $food-order-app-accent,
+    warn: $food-order-app-warn,
+  )
+));
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('assets/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('assets/fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('assets/fonts/Montserrat-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('assets/fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('assets/fonts/Montserrat-Regular.ttf');
+}
+
+.restaurantFontBold {
+  font-family: 'Montserrat-Bold';
+}
+
+.restaurantFontMedium {
+  font-family: 'Montserrat-Medium';
+}
+
+.restaurantFontRegular {
+  font-family: 'Montserrat-Regular'
+}
+
+// Apply the theme to all components
+@include mat.all-component-themes($food-order-app-theme);
+
+// Optional: Force toolbar background color for testing
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Montserrat-Regular' }

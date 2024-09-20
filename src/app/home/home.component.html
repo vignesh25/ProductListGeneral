@@ -1,0 +1,34 @@
+<app-header *ngIf="showHeader" (filterDishes)="filterSearchedDishes($event)" (toggleDishes)="toggleDishes($event)"></app-header>
+<div class="container">
+  <div class="top-rated">
+    <mat-card *ngFor="let restaurant of displayMenuList" (click)="viewDescription(restaurant)">
+      <div class="restaurant-card row">
+        <div class="col-md-3 col-lg-3 col-6">
+          <img mat-card-image [src]="restaurant.image" [alt]="restaurant.name" class="restaurant-image">
+        </div>
+        <div class="col-md-9 col-lg-9 col-6">
+          <div class="restaurant-info">
+            <div style="margin-bottom: 4px;" class="restaurantFontBold">{{restaurant.name}}</div>
+            <div class="restaurantFontMedium" style="margin-bottom: 4px;">{{restaurant.cost}}</div>
+            <div style="display: flex;width: 100%;">
+              <div style="width: 1%;">
+                <mat-icon style="font-size: 18px;color: #ffa000;">star</mat-icon>
+              </div>
+              <div class="restaurantFontMedium" style="width: 99%; margin-left: 1rem;">
+                &nbsp;{{restaurant.rating}}
+              </div>
+            </div>
+            <!-- <div class="row" style="width: 100%;">
+              <div class="col-md-1 col-lg-1 col-2">
+                <mat-icon style="font-size: 18px">star</mat-icon>
+              </div>
+              <div class="col-md-11 col-lg-11 col-10">
+                {{restaurant.rating}}
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

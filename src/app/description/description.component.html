@@ -1,0 +1,19 @@
+<app-header [showHeader]="false"></app-header>
+
+<div class="item-detail-container">
+  <div class="image-wrapper">
+    <button mat-icon-button (click)="goBack()" class="back-button">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <img [src]="itemDetails.image" alt="{{itemDetails.name}}" class="item-image">
+  </div>
+  <div class="item-description-container">
+    <div class="restaurantFontBold" style="margin-bottom: 1%;">{{ itemDetails.name }}</div>
+    <div class="restaurantFontMedium">{{ itemDetails.description }}</div>
+  </div>
+  <div class="footer">
+    <button style="width: 100%;padding: 20px;" mat-raised-button class="custom-button" (click)="addToCart(itemDetails)">
+      Add to Cart
+    </button>
+  </div>
+</div>
