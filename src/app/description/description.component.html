@@ -9,10 +9,10 @@
   </div>
   <div class="item-description-container">
     <div class="restaurantFontBold" style="margin-bottom: 1%;">{{ itemDetails.name }}</div>
-    <div class="restaurantFontMedium">{{ itemDetails.description }}</div>
+    <div class="restaurantFontRegular">{{ itemDetails.description }}</div>
   </div>
   <div class="footer">
-    <button style="width: 100%;padding: 20px;" mat-raised-button class="custom-button" (click)="addToCart(itemDetails)">
+    <button style="width: 100%;padding: 20px;" mat-raised-button class="custom-button restaurantFontMedium" (click)="addToCart(itemDetails)">
       Add to Cart
     </button>
   </div>

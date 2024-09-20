@@ -6,7 +6,7 @@
         <div class="col-md-3 col-lg-3 col-6">
           <img mat-card-image [src]="restaurant.image" [alt]="restaurant.name" class="restaurant-image">
         </div>
-        <div class="col-md-9 col-lg-9 col-6">
+        <div class="col-md-8 col-lg-8 col-5">
           <div class="restaurant-info">
             <div style="margin-bottom: 4px;" class="restaurantFontBold">{{restaurant.name}}</div>
             <div class="restaurantFontMedium" style="margin-bottom: 4px;">{{restaurant.cost}}</div>
@@ -18,15 +18,10 @@
                 &nbsp;{{restaurant.rating}}
               </div>
             </div>
-            <!-- <div class="row" style="width: 100%;">
-              <div class="col-md-1 col-lg-1 col-2">
-                <mat-icon style="font-size: 18px">star</mat-icon>
-              </div>
-              <div class="col-md-11 col-lg-11 col-10">
-                {{restaurant.rating}}
-              </div>
-            </div> -->
           </div>
+        </div>
+        <div class="col-md-1 col-lg-1 col-1" style="margin-top: -4rem;width: 1%;padding: 0;">
+          <mat-icon style="font-size: 18px;" [ngClass]="restaurant.isVeg ? 'vegFood' : 'nonVegFood'">stop_circle</mat-icon>
         </div>
       </div>
     </mat-card>
